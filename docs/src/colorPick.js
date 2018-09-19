@@ -131,8 +131,7 @@
 
             $("body").append('<div id="colorPick" style="display:none;top:' + top + 'px;left:' + left + 'px"><span>'+$.fn.colorPick.defaults.paletteLabel+'</span></div>');
             let disabledColors = this.options.disabledPalette;
-            console.log(disabledColors);
-	        jQuery.each(this.palette, function (index, item) {
+            jQuery.each(this.palette, function (index, item) {
                 $("#colorPick").append('<div class="colorPickButton ' + ((disabledColors.indexOf(item.toLowerCase())>-1)?'disabled':'') +'" hexValue="' + item + '" style="background:' + item + '"></div>');
 			});
             if ($.fn.colorPick.defaults.allowCustomColor === true) {
