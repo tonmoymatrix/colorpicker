@@ -128,7 +128,7 @@
         show: function(left, top) {
 
             $("#colorPick").remove();
-
+            
             $("body").append('<div id="colorPick" style="display:none;top:' + top + 'px;left:' + left + 'px"><span>'+$.fn.colorPick.defaults.paletteLabel+'</span></div>');
             let disabledColors = this.options.disabledPalette;
             jQuery.each(this.palette, function (index, item) {

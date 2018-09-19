@@ -34,9 +34,10 @@
 		$(".picker").colorPick({
 			'initialColor' : '#8e44ad',
 			'palette': ["#1abc9c", "#16a085", "#2ecc71", "#27ae60", "#3498db", "#2980b9", "#9b59b6", "#8e44ad", "#34495e", "#2c3e50", "#f1c40f", "#f39c12", "#e67e22", "#d35400", "#e74c3c", "#c0392b", "#ecf0f1"],
-			'disabledPalette' : ["#3498db", "#2980b9", "#9b59b6", "#8e44ad", "#34495e", "#2c3e50", "#f1c40f", "#f39c12", "#e67e22", "#d35400"],
+			'disabledPalette' : ["#3498db", "#2980b9"],
 			'allowRecent': false,
 			'onColorSelected': function() {
+				this.options.disabledPalette.push(this.color.toLowerCase());
 				this.element.css({'backgroundColor': this.color, 'color': this.color});
 				
 			}

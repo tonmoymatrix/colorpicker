@@ -73,14 +73,16 @@
 	border: 1px dashed #bbb;
 }
 .colorPickButton.disabled::before {
-	content: '✕';
+	content: '/';
     background: rgba(214, 214, 214, 0.5);
     text-align: center;
     position: absolute;
     width: 100%;
     height: 100%;
-    color: #6f6f6f;
+    color: #c33535;
     border-radius: 50%;
+    transform: rotate(19deg);
+	
 }
 .disabled {
 	pointer-events: none;
