@@ -7,6 +7,7 @@
 * Licensed under the MIT License
 *
 */
+var globalDisabledPalette = ["#1abc9c", "#16a085", "#2ecc71", "#27ae60"];
 (function( $ ) {
 
     $.fn.colorPick = function(config) {
@@ -130,7 +131,8 @@
             $("#colorPick").remove();
             
             $("body").append('<div id="colorPick" style="display:none;top:' + top + 'px;left:' + left + 'px"><span>'+$.fn.colorPick.defaults.paletteLabel+'</span></div>');
-            let disabledColors = this.options.disabledPalette;
+            //let disabledColors = this.options.disabledPalette;
+            let disabledColors = globalDisabledPalette;
             jQuery.each(this.palette, function (index, item) {
                 $("#colorPick").append('<div class="colorPickButton ' + ((disabledColors.indexOf(item.toLowerCase())>-1)?'disabled':'') +'" hexValue="' + item + '" style="background:' + item + '"></div>');
 			});
